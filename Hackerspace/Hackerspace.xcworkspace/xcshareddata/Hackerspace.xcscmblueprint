@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E9D1EAEF5A11FBD2570CB59082C826198F79831C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E9D1EAEF5A11FBD2570CB59082C826198F79831C" : 0,
+    "81BB984AE1F441F8BF9C0B3F9C518B78567B19B6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6D3CC550-20AE-48A9-95CC-F939244923CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E9D1EAEF5A11FBD2570CB59082C826198F79831C" : "Hackerspace\/",
+    "81BB984AE1F441F8BF9C0B3F9C518B78567B19B6" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hackerspace",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hackerspace\/Hackerspace.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wangyayu\/Hackerspace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81BB984AE1F441F8BF9C0B3F9C518B78567B19B6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wangyayu\/Hackerspace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E9D1EAEF5A11FBD2570CB59082C826198F79831C"
+    }
+  ]
+}

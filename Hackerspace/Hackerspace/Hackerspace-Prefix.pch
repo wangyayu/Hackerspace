@@ -1,0 +1,16 @@
+//
+//  Hackerspace-Prefix.pch
+//  Hackerspace
+//
+//  Created by wangyayu on 16/6/28.
+//  Copyright © 2016年 wangyy. All rights reserved.
+//
+#import "utilisDefine.h"
+#import "untilisTool.h"
+#ifndef Hackerspace_Prefix_pch
+#define Hackerspace_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Hackerspace_Prefix_pch */
