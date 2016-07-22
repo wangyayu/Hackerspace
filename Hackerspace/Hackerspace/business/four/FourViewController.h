@@ -8,6 +8,13 @@
 
 #import "BaseViewController.h"
 
-@interface FourViewController : BaseViewController
+@interface FourViewController : BaseViewController<UITableViewDataSource,
+
+UITableViewDelegate>{
+    
+    UITableView *myTableView;
+}
+
+@property(nonatomic, strong) NSMutableArray* myData;//数据源
 
 @end
