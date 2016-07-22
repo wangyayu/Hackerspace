@@ -22,11 +22,12 @@
 		1D8C6A7D1D222F5500BB5697 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C6A6C1D222F5500BB5697 /* BaseViewController.m */; };
 		1D8C6A7E1D222F5500BB5697 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8C6A6D1D222F5500BB5697 /* BaseViewController.xib */; };
 		1D8C6A7F1D222F5500BB5697 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C6A6F1D222F5500BB5697 /* mainViewController.m */; };
-		1D8C6A801D222F5500BB5697 /* ControlNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C6A731D222F5500BB5697 /* ControlNetWork.m */; };
-		1D8C6A811D222F5500BB5697 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C6A751D222F5500BB5697 /* HttpManager.m */; };
 		1D8C6A821D222F5500BB5697 /* untilisTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C6A781D222F5500BB5697 /* untilisTool.m */; };
 		1D8C6A871D225CA100BB5697 /* MBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C6A861D225CA100BB5697 /* MBaseCell.m */; };
 		43F7A23DB18AB6920E0D3099 /* libPods-Hackerspace.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8D856AE6E5A8588217D9AA /* libPods-Hackerspace.a */; };
+		E82017231D421D3700D98D92 /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E820171E1D421D3700D98D92 /* AFDownloadRequestOperation.m */; };
+		E82017241D421D3700D98D92 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E82017201D421D3700D98D92 /* DownloadTask.m */; };
+		E82017251D421D3700D98D92 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E82017221D421D3700D98D92 /* Networking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,16 +79,18 @@
 		1D8C6A6D1D222F5500BB5697 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 		1D8C6A6E1D222F5500BB5697 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
 		1D8C6A6F1D222F5500BB5697 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
-		1D8C6A721D222F5500BB5697 /* ControlNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlNetWork.h; sourceTree = "<group>"; };
-		1D8C6A731D222F5500BB5697 /* ControlNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlNetWork.m; sourceTree = "<group>"; };
-		1D8C6A741D222F5500BB5697 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
-		1D8C6A751D222F5500BB5697 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		1D8C6A771D222F5500BB5697 /* untilisTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = untilisTool.h; sourceTree = "<group>"; };
 		1D8C6A781D222F5500BB5697 /* untilisTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = untilisTool.m; sourceTree = "<group>"; };
 		1D8C6A831D22305400BB5697 /* Hackerspace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackerspace-Prefix.pch"; sourceTree = "<group>"; };
 		1D8C6A851D225CA100BB5697 /* MBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBaseCell.h; sourceTree = "<group>"; };
 		1D8C6A861D225CA100BB5697 /* MBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBaseCell.m; sourceTree = "<group>"; };
 		4C8D856AE6E5A8588217D9AA /* libPods-Hackerspace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackerspace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E820171D1D421D3700D98D92 /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadRequestOperation.h; sourceTree = "<group>"; };
+		E820171E1D421D3700D98D92 /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
+		E820171F1D421D3700D98D92 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
+		E82017201D421D3700D98D92 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
+		E82017211D421D3700D98D92 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		E82017221D421D3700D98D92 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		E8F405E8BDD815BBA2366ADF /* Pods-Hackerspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackerspace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackerspace/Pods-Hackerspace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,10 +285,7 @@
 		1D8C6A711D222F5500BB5697 /* netWork */ = {
 			isa = PBXGroup;
 			children = (
-				1D8C6A721D222F5500BB5697 /* ControlNetWork.h */,
-				1D8C6A731D222F5500BB5697 /* ControlNetWork.m */,
-				1D8C6A741D222F5500BB5697 /* HttpManager.h */,
-				1D8C6A751D222F5500BB5697 /* HttpManager.m */,
+				E820171C1D421D3700D98D92 /* Networking */,
 			);
 			path = netWork;
 			sourceTree = "<group>";
@@ -323,6 +323,19 @@
 				4C8D856AE6E5A8588217D9AA /* libPods-Hackerspace.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E820171C1D421D3700D98D92 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E820171D1D421D3700D98D92 /* AFDownloadRequestOperation.h */,
+				E820171E1D421D3700D98D92 /* AFDownloadRequestOperation.m */,
+				E820171F1D421D3700D98D92 /* DownloadTask.h */,
+				E82017201D421D3700D98D92 /* DownloadTask.m */,
+				E82017211D421D3700D98D92 /* Networking.h */,
+				E82017221D421D3700D98D92 /* Networking.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,13 +520,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82017241D421D3700D98D92 /* DownloadTask.m in Sources */,
+				E82017231D421D3700D98D92 /* AFDownloadRequestOperation.m in Sources */,
 				1D8C6A7C1D222F5500BB5697 /* TwoViewController.m in Sources */,
+				E82017251D421D3700D98D92 /* Networking.m in Sources */,
 				1D8C6A7D1D222F5500BB5697 /* BaseViewController.m in Sources */,
 				1D8C6A2E1D22163500BB5697 /* ViewController.m in Sources */,
 				1D8C6A7A1D222F5500BB5697 /* OneViewController.m in Sources */,
-				1D8C6A801D222F5500BB5697 /* ControlNetWork.m in Sources */,
 				1D8C6A821D222F5500BB5697 /* untilisTool.m in Sources */,
-				1D8C6A811D222F5500BB5697 /* HttpManager.m in Sources */,
 				062E712B1D2B76C200EB3DF3 /* AppDelegate.m in Sources */,
 				1D8C6A7B1D222F5500BB5697 /* ThreeViewController.m in Sources */,
 				1D8C6A7F1D222F5500BB5697 /* mainViewController.m in Sources */,
