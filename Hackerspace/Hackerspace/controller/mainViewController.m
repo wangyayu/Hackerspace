@@ -60,28 +60,28 @@
     navC1.navigationBar.barTintColor = kMainColor;
     //设置navigationBar  title字体颜色
     [navC1.navigationBar setTitleTextAttributes
-     :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
+     :@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     UINavigationController *navC2 = [[UINavigationController alloc]
                                      initWithRootViewController:vc2];
     navC2.navigationBar.barTintColor = kMainColor;
     
     [navC2.navigationBar setTitleTextAttributes
-     :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
+     :@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     UINavigationController *navC3 = [[UINavigationController alloc]
                                      initWithRootViewController:vc3];
     navC3.navigationBar.barTintColor = kMainColor;
     
     [navC3.navigationBar setTitleTextAttributes
-     :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
+     :@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     UINavigationController *navC4 = [[UINavigationController alloc]
                                      initWithRootViewController:vc4];
     navC4.navigationBar.barTintColor = kMainColor;
     
     [navC4.navigationBar setTitleTextAttributes
-     :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
+     :@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     
     

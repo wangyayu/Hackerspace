@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [untilisTool stringTOColor:@"#f3f4f6"];
     [self checkSystemAdjustView];
+    //设置返回箭头和文字颜色
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +71,9 @@
         self.navigationItem.rightBarButtonItem = item;
     }
 }
+
+
+
 
 -(void)checkSystemAdjustView{
     if (IOS_VERSION_7_OR_LATER) {

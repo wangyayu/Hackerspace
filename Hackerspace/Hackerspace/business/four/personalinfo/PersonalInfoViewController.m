@@ -1,26 +1,20 @@
 //
-//  FourViewController.m
-//  OA5173
+//  PersonalInfoViewController.m
+//  Hackerspace
 //
-//  Created by wangyayu on 16/5/25.
+//  Created by macmi001 on 16/7/26.
 //  Copyright © 2016年 wangyy. All rights reserved.
 //
 
-#import "FourViewController.h"
-#import "Masonry.h"
-#import "Networking.h"
-
 #import "PersonalInfoViewController.h"
-@interface FourViewController ()
+#import "ParallaxHeaderView.h"
+@interface PersonalInfoViewController ()
+
+@property (nonatomic) NSDictionary *story;
+
 @end
 
-@implementation FourViewController
-
-- (void)viewWillAppear:(BOOL)animated{
-
-    [myTableView deselectRowAtIndexPath:[myTableView indexPathForSelectedRow]
-                               animated:YES];
-}
+@implementation PersonalInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,10 +26,8 @@
 -(void)initModel{
     self.myData = [[NSMutableArray alloc]init];
     [self.myData addObject:@"个人资料"];
-    [self.myData addObject:@"消息中心"];
-    [self.myData addObject:@"我的钱包"];
-    [self.myData addObject:@"功能设置"];
-    [self.myData addObject:@"空间会员"];
+    [self.myData addObject:@"成为会员"];
+    
     
 }
 -(void)initView{
@@ -52,7 +44,10 @@
         make.bottom.equalTo(ws.view.mas_bottom);
         make.top.equalTo(ws.view.mas_top);
     }];
+    ParallaxHeaderView *headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:[UIImage imageNamed:@"HeaderImage"] forSize:CGSizeMake(myTableView.frame.size.width, 200)];
+    headerView.headerTitleLabel.text = self.story[@"story"];
     
+    [myTableView setTableHeaderView:headerView];
 }
 
 #pragma mark
@@ -81,24 +76,22 @@ numberOfRowsInSection:(NSInteger)section
 {
     return self.myData.count;
 }
+
+#pragma mark UISCrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == myTableView)
+    {
+        // pass the current offset of the UITableView so that the ParallaxHeaderView layouts the subViews.
+        [(ParallaxHeaderView *)myTableView.tableHeaderView layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
+    }
+}
 //点击
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
-        case 0:
-            //我的资料
-        {
-            PersonalInfoViewController* userInfoVC = [[PersonalInfoViewController alloc]init];
-            userInfoVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:userInfoVC animated:YES];
-        }
-            break;
-        
-        default:
-            break;
-    }
-
+    
 }
 
 #pragma mark返回每行的单元格
@@ -115,37 +108,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = self.myData[indexPath.row];
-    NSString* t = [self.myData objectAtIndex:indexPath.row];
-    
-    [self.myData addObject:@"个人资料"];
-    [self.myData addObject:@"消息中心"];
-    [self.myData addObject:@"我的钱包"];
-    [self.myData addObject:@"功能设置"];
-    [self.myData addObject:@"空间会员"];
-    
-    if([t isEqualToString:@"个人资料"])
-    {
-        cell.imageView.image = [UIImage imageNamed:@"gerenxinxi"];
-    }
-    else if([t isEqualToString:@"消息中心"])
-    {
-        cell.imageView.image = [UIImage imageNamed:@"xiaoxizhongxin"];
-    }
-    else if ([t isEqualToString:@"我的钱包"])
-    {
-        cell.imageView.image = [UIImage imageNamed:@"wodeqianbao"];
-    }
-    else if ([t isEqualToString:@"功能设置"])
-    {
-        cell.imageView.image = [UIImage imageNamed:@"gongnengshezhi"];
-    }
-    else if ([t isEqualToString:@"空间会员"])
-    {
-        cell.imageView.image = [UIImage imageNamed:@"kongjianhuiyuan"];
-    }
     return cell;
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -29,6 +29,9 @@
 		E82017241D421D3700D98D92 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E82017201D421D3700D98D92 /* DownloadTask.m */; };
 		E82017251D421D3700D98D92 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E82017221D421D3700D98D92 /* Networking.m */; };
 		E86A4D131D46122F00FD7D68 /* LBLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = E86A4D121D46122F00FD7D68 /* LBLaunchImageAdView.m */; };
+		E898663D1D47537A00C5F301 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E898663C1D47537A00C5F301 /* ParallaxHeaderView.m */; };
+		E89866401D4753A700C5F301 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E898663F1D4753A700C5F301 /* UIImage+ImageEffects.m */; };
+		E89866471D47559900C5F301 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89866461D47559900C5F301 /* PersonalInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,12 @@
 		E82017221D421D3700D98D92 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		E86A4D111D46122F00FD7D68 /* LBLaunchImageAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBLaunchImageAdView.h; sourceTree = "<group>"; };
 		E86A4D121D46122F00FD7D68 /* LBLaunchImageAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBLaunchImageAdView.m; sourceTree = "<group>"; };
+		E898663B1D47537A00C5F301 /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
+		E898663C1D47537A00C5F301 /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
+		E898663E1D4753A700C5F301 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		E898663F1D4753A700C5F301 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		E89866451D47559900C5F301 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
+		E89866461D47559900C5F301 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
 		E8F405E8BDD815BBA2366ADF /* Pods-Hackerspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackerspace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackerspace/Pods-Hackerspace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +223,7 @@
 		1D8C6A5B1D222F5500BB5697 /* four */ = {
 			isa = PBXGroup;
 			children = (
+				E89866411D47550700C5F301 /* personalinfo */,
 				1D8C6A5C1D222F5500BB5697 /* FourViewController.h */,
 				1D8C6A5D1D222F5500BB5697 /* FourViewController.m */,
 			);
@@ -296,6 +306,7 @@
 		1D8C6A761D222F5500BB5697 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				E898663A1D47536500C5F301 /* ParallaxHeaderView */,
 				E86A4D101D46122F00FD7D68 /* LBLaunchImageAd */,
 				1D8C6A771D222F5500BB5697 /* untilisTool.h */,
 				1D8C6A781D222F5500BB5697 /* untilisTool.m */,
@@ -349,6 +360,26 @@
 				E86A4D121D46122F00FD7D68 /* LBLaunchImageAdView.m */,
 			);
 			path = LBLaunchImageAd;
+			sourceTree = "<group>";
+		};
+		E898663A1D47536500C5F301 /* ParallaxHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E898663E1D4753A700C5F301 /* UIImage+ImageEffects.h */,
+				E898663F1D4753A700C5F301 /* UIImage+ImageEffects.m */,
+				E898663B1D47537A00C5F301 /* ParallaxHeaderView.h */,
+				E898663C1D47537A00C5F301 /* ParallaxHeaderView.m */,
+			);
+			path = ParallaxHeaderView;
+			sourceTree = "<group>";
+		};
+		E89866411D47550700C5F301 /* personalinfo */ = {
+			isa = PBXGroup;
+			children = (
+				E89866451D47559900C5F301 /* PersonalInfoViewController.h */,
+				E89866461D47559900C5F301 /* PersonalInfoViewController.m */,
+			);
+			path = personalinfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,8 +571,10 @@
 				1D8C6A7C1D222F5500BB5697 /* TwoViewController.m in Sources */,
 				E82017251D421D3700D98D92 /* Networking.m in Sources */,
 				1D8C6A7D1D222F5500BB5697 /* BaseViewController.m in Sources */,
+				E89866471D47559900C5F301 /* PersonalInfoViewController.m in Sources */,
 				1D8C6A2E1D22163500BB5697 /* ViewController.m in Sources */,
 				1D8C6A7A1D222F5500BB5697 /* OneViewController.m in Sources */,
+				E898663D1D47537A00C5F301 /* ParallaxHeaderView.m in Sources */,
 				1D8C6A821D222F5500BB5697 /* untilisTool.m in Sources */,
 				062E712B1D2B76C200EB3DF3 /* AppDelegate.m in Sources */,
 				1D8C6A7B1D222F5500BB5697 /* ThreeViewController.m in Sources */,
@@ -549,6 +582,7 @@
 				1D8C6A791D222F5500BB5697 /* FourViewController.m in Sources */,
 				1D8C6A871D225CA100BB5697 /* MBaseCell.m in Sources */,
 				1D8C6A281D22163500BB5697 /* main.m in Sources */,
+				E89866401D4753A700C5F301 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
