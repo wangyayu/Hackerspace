@@ -13,6 +13,10 @@
 #define kSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define kBackGroundColor  RGB_Color(242, 245, 242, 1)     //最底层背景颜色
+#define kMainColor [UIColor colorWithRed:60/255.0 green:180/255.0 blue:82/255.0 alpha:1.0]  //主色调
+
+
 #define DEBUG_MODE 1
 
 //带有坐标的日志输出

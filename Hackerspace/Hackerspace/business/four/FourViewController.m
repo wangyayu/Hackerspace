@@ -53,12 +53,12 @@
 - (CGFloat)tableView:(UITableView *)tableView
 heightForHeaderInSection:(NSInteger)section{
     
-    return 0.0000001;
+    return 5.0;
 }
 - (CGFloat)tableView:(UITableView *)tableView
 heightForFooterInSection:(NSInteger)section{
     
-    return 0.0000001;
+    return 5.0;
 }
 -(CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{

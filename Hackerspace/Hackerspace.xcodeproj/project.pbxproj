@@ -421,6 +421,7 @@
 				TargetAttributes = {
 					1D8C6A221D22163500BB5697 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 52F62QD5HL;
 					};
 					1D8C6A3B1D22163500BB5697 = {
 						CreatedOnToolsVersion = 7.3;
@@ -695,6 +696,7 @@
 			baseConfigurationReference = E8F405E8BDD815BBA2366ADF /* Pods-Hackerspace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hackerspace/Info.plist;
@@ -710,6 +712,7 @@
 			baseConfigurationReference = 06FB89E7120AF1BA5DC73702 /* Pods-Hackerspace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hackerspace/Info.plist;

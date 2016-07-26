@@ -28,60 +28,57 @@
     ILog(@"初始化===");
     
     OneViewController *vc1 = [[OneViewController alloc] init];
-    //    vc1.tabBarItem.badgeValue = @"";//显示消息数量
     vc1.title = @"社区动态";
-    vc1.tabBarItem.image = [UIImage imageNamed:@"one_homepage"];
-    vc1.tabBarItem.selectedImage = [UIImage imageNamed:@"one_homepage"];
+    vc1.tabBarItem.image = [UIImage imageNamed:@"home_nom"];
+    vc1.tabBarItem.selectedImage = [UIImage imageNamed:@"home_clc"];
+     //    vc1.tabBarItem.badgeValue = @"";
     
     TwoViewController *vc2 = [[TwoViewController alloc] init];
     //    vc2.tabBarItem.badgeValue = @"";
     vc2.title = @"社区小组";
-    vc2.tabBarItem.image = [UIImage imageNamed:@"two_shop"];
-    vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"two_shop"];
+    vc2.tabBarItem.image = [UIImage imageNamed:@"xiaozu_nom"];
+    vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"xiaozu_clc"];
     
     ThreeViewController *vc3 = [[ThreeViewController alloc] init];
     //    vc3.tabBarItem.badgeValue = @"";
     vc3.title = @"社区资源";
-    vc3.tabBarItem.image = [UIImage imageNamed:@"three_find"];
-    vc3.tabBarItem.selectedImage = [UIImage imageNamed:@"three_find"];
+    vc3.tabBarItem.image = [UIImage imageNamed:@"shequ_nom"];
+    vc3.tabBarItem.selectedImage = [UIImage imageNamed:@"shequ_clc"];
     
     FourViewController* vc4 = [[FourViewController alloc] init];
     //    vc4.tabBarItem.badgeValue = @"";
     vc4.title = @"我的信息";
-    vc4.tabBarItem.image = [UIImage imageNamed:@"four_about"];
-    vc4.tabBarItem.selectedImage = [UIImage imageNamed:@"four_about"];
+    vc4.tabBarItem.image = [UIImage imageNamed:@"wode_nom"];
+    vc4.tabBarItem.selectedImage = [UIImage imageNamed:@"wode_clc"];
     
     
     UINavigationController *navC1 = [[UINavigationController alloc]
                                      initWithRootViewController:vc1];
-    
+    //设置UITabBar背景色
+    [[UITabBar appearance] setBackgroundColor:[UIColor lightGrayColor]];
     //设置navigationBar颜色
-    navC1.navigationBar.barTintColor =
-    [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
+    navC1.navigationBar.barTintColor = kMainColor;
     //设置navigationBar  title字体颜色
     [navC1.navigationBar setTitleTextAttributes
      :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
     
     UINavigationController *navC2 = [[UINavigationController alloc]
                                      initWithRootViewController:vc2];
-    navC2.navigationBar.barTintColor =
-    [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
+    navC2.navigationBar.barTintColor = kMainColor;
     
     [navC2.navigationBar setTitleTextAttributes
      :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
     
     UINavigationController *navC3 = [[UINavigationController alloc]
                                      initWithRootViewController:vc3];
-    navC3.navigationBar.barTintColor =
-    [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
+    navC3.navigationBar.barTintColor = kMainColor;
     
     [navC3.navigationBar setTitleTextAttributes
      :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
     
     UINavigationController *navC4 = [[UINavigationController alloc]
                                      initWithRootViewController:vc4];
-    navC4.navigationBar.barTintColor =
-    [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
+    navC4.navigationBar.barTintColor = kMainColor;
     
     [navC4.navigationBar setTitleTextAttributes
      :@{NSForegroundColorAttributeName : [UIColor darkGrayColor]}];
