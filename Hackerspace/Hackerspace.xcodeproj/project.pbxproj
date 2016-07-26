@@ -28,6 +28,7 @@
 		E82017231D421D3700D98D92 /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E820171E1D421D3700D98D92 /* AFDownloadRequestOperation.m */; };
 		E82017241D421D3700D98D92 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E82017201D421D3700D98D92 /* DownloadTask.m */; };
 		E82017251D421D3700D98D92 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E82017221D421D3700D98D92 /* Networking.m */; };
+		E86A4D131D46122F00FD7D68 /* LBLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = E86A4D121D46122F00FD7D68 /* LBLaunchImageAdView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		E82017201D421D3700D98D92 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
 		E82017211D421D3700D98D92 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		E82017221D421D3700D98D92 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		E86A4D111D46122F00FD7D68 /* LBLaunchImageAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBLaunchImageAdView.h; sourceTree = "<group>"; };
+		E86A4D121D46122F00FD7D68 /* LBLaunchImageAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBLaunchImageAdView.m; sourceTree = "<group>"; };
 		E8F405E8BDD815BBA2366ADF /* Pods-Hackerspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackerspace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackerspace/Pods-Hackerspace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +296,7 @@
 		1D8C6A761D222F5500BB5697 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				E86A4D101D46122F00FD7D68 /* LBLaunchImageAd */,
 				1D8C6A771D222F5500BB5697 /* untilisTool.h */,
 				1D8C6A781D222F5500BB5697 /* untilisTool.m */,
 			);
@@ -336,6 +340,15 @@
 				E82017221D421D3700D98D92 /* Networking.m */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E86A4D101D46122F00FD7D68 /* LBLaunchImageAd */ = {
+			isa = PBXGroup;
+			children = (
+				E86A4D111D46122F00FD7D68 /* LBLaunchImageAdView.h */,
+				E86A4D121D46122F00FD7D68 /* LBLaunchImageAdView.m */,
+			);
+			path = LBLaunchImageAd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86A4D131D46122F00FD7D68 /* LBLaunchImageAdView.m in Sources */,
 				E82017241D421D3700D98D92 /* DownloadTask.m in Sources */,
 				E82017231D421D3700D98D92 /* AFDownloadRequestOperation.m in Sources */,
 				1D8C6A7C1D222F5500BB5697 /* TwoViewController.m in Sources */,

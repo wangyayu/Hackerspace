@@ -13,24 +13,46 @@
 #import "ThreeViewController.h"
 #import "FourViewController.h"
 #import "AppDelegate.h"
-
+#import "LBLaunchImageAdView.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 //git hub
-
+//开平动画结束
+-(void)updateNewsItems{
+    mainViewController *mainVc = [[mainViewController alloc]init];
+    self.window.rootViewController = mainVc;
+    [self.window makeKeyAndVisible];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    LBLaunchImageAdView * adView = [[LBLaunchImageAdView alloc]initWithWindow:self.window andType:FullScreenAdType andImgUrl:@"http://hbimg.b0.upaiyun.com/218c450b40017636ca48deb49514a0bc2919c0b453de1-TmqXof_fw658"];
     
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    //各种回调
+    adView.clickBlock = ^(NSInteger tag){
+        switch (tag) {
+            case 1100:{
+                NSLog(@"点击广告回调");
+            }
+                break;
+            case 1101:
+                NSLog(@"点击跳过回调");
+                [self updateNewsItems];
+                break;
+            case 1102:
+                NSLog(@"倒计时完成后的回调");
+                [self updateNewsItems];
+                break;
+            default:
+                break;
+        }
+        
+    };
     
-    mainViewController *mainVc = [[mainViewController alloc]init];
     
-    [self.window makeKeyAndVisible];
-    
-    self.window.rootViewController = mainVc;
     return YES;
 }
 
