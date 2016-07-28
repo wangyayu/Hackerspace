@@ -12,7 +12,9 @@
 //创建导航条的标题视图
 - (void)addTitleViewWithTitle:(NSString *)title;
 //创建导航条的左右按钮
-- (void)addBarButtonItemWithTitle:(NSString *)title imageName:(NSString *)imageName frame:(CGRect)frame target:(id)target action:(SEL)action isLeft:(BOOL)isLeft isCircle:(BOOL)isCircle;
+- (void)addBarButtonItemWithTitle:(NSString *)title imageName:(NSString *)imageName
+                            frame:(CGRect)frame target:(id)target action:(SEL)action
+                           isLeft:(BOOL)isLeft isCircle:(BOOL)isCircle;
 
 /**
  *  查看系统版本是否大于7.0 

@@ -8,7 +8,11 @@
 
 #import "PersonalInfoViewController.h"
 #import "ParallaxHeaderView.h"
-@interface PersonalInfoViewController ()
+@interface PersonalInfoViewController (){
+
+
+    NSMutableArray *testarr;
+}
 
 @property (nonatomic) NSDictionary *story;
 
@@ -18,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"个人资料";
     // Do any additional setup after loading the view.
     [self initModel];
     [self initView];
@@ -25,10 +30,31 @@
 
 -(void)initModel{
     self.myData = [[NSMutableArray alloc]init];
-    [self.myData addObject:@"个人资料"];
-    [self.myData addObject:@"成为会员"];
+    NSMutableArray* sectionArrI = [[NSMutableArray alloc]init];
+    NSMutableArray* sectionArrII = [[NSMutableArray alloc]init];
+    NSMutableArray* sectionArrIII = [[NSMutableArray alloc]init];
+    
+    [sectionArrI addObject:@"我的"];
+    
+    [sectionArrII addObject:@"修改资料"];
+    [sectionArrII addObject:@"职业:"];
+    [sectionArrII addObject:@"关注:"];
+    [sectionArrII addObject:@"年龄:"];
+    [sectionArrII addObject:@"签名:"];
+    
+    [sectionArrIII addObject:@"成为会员"];
+    
+    [self.myData addObject:sectionArrI];
+    [self.myData addObject:sectionArrII];
+    [self.myData addObject:sectionArrIII];
     
     
+    //=================test
+    testarr = [[NSMutableArray alloc]init];
+    [testarr addObject:@"程序员"];
+    [testarr addObject:@"互联网"];
+    [testarr addObject:@"30"];
+    [testarr addObject:@"做个有意思的人"];
 }
 -(void)initView{
     
@@ -59,22 +85,29 @@ heightForHeaderInSection:(NSInteger)section{
 - (CGFloat)tableView:(UITableView *)tableView
 heightForFooterInSection:(NSInteger)section{
     
-    return 0.0000001;
+    return 5;
 }
 -(CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    CGFloat h = 60.0;
+    CGFloat h;
+    if (indexPath.section==0) {
+        h = 70;
+    }else{
+        h = 42.0;
+    }
     return h;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 1;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section
 {
-    return self.myData.count;
+    NSMutableArray *larr = self.myData[section];
+    NSInteger count = larr.count;
+    ILog(@"s个数%ld",count);
+    return count;
 }
 
 #pragma mark UISCrollViewDelegate
@@ -103,11 +136,54 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath]; //根据indexPath准确地取出一行，而不是从cell重用队列中取出
     if (cell == nil) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
                                       reuseIdentifier:CellIdentifier];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = self.myData[indexPath.row];
+    if (indexPath.section==0&&indexPath.row==0) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }else{
+        if (indexPath.section==1) {
+            
+            cell.textLabel.text = self.myData[indexPath.section][indexPath.row];
+            if(indexPath.row==0)
+            {
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+            else if(indexPath.row==1)
+            {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                cell.imageView.image = [UIImage imageNamed:@"wodezhiye"];
+                cell.detailTextLabel.text = testarr[0];
+            }
+            else if (indexPath.row==2)
+            {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                cell.imageView.image = [UIImage imageNamed:@"wodeguanzhu"];
+                cell.detailTextLabel.text = testarr[1];
+            }
+            else if (indexPath.row==3)
+            {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                cell.imageView.image = [UIImage imageNamed:@"wodenianling"];
+                cell.detailTextLabel.text = testarr[2];
+            }
+            else if (indexPath.row==4)
+            {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                cell.imageView.image = [UIImage imageNamed:@"gexingqianming"];
+                cell.detailTextLabel.text = testarr[3];
+            }
+        }
+        
+        if (indexPath.section==2&&indexPath.row==0) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.textLabel.text = self.myData[indexPath.section][indexPath.row];
+
+        }
+    
+    }
+    
+    
     return cell;
 }
 - (void)didReceiveMemoryWarning {
