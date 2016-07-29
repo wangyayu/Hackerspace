@@ -10,8 +10,10 @@
 #import "OneViewController.h"
 #import "TwoViewController.h"
 #import "ThreeViewController.h"
+#import "ADTestViewController.h"
 #import "FourViewController.h"
 #import "LCTabBarController.h"
+
 @interface mainViewController ()
 
 @end
@@ -27,6 +29,14 @@
 - (void)setController{
     ILog(@"初始化===");
     
+    
+    
+//    ADTestViewController *vc1 = [[ADTestViewController alloc] init];
+//    vc1.title = @"广告测试";
+//    vc1.tabBarItem.image = [UIImage imageNamed:@"home_nom"];
+//    vc1.tabBarItem.selectedImage = [UIImage imageNamed:@"home_clc"];
+    
+    
     OneViewController *vc1 = [[OneViewController alloc] init];
     vc1.title = @"社区动态";
     vc1.tabBarItem.image = [UIImage imageNamed:@"home_nom"];
@@ -40,7 +50,8 @@
     vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"xiaozu_clc"];
     
     ThreeViewController *vc3 = [[ThreeViewController alloc] init];
-    //    vc3.tabBarItem.badgeValue = @"";
+//        vc3.tabBarItem.badgeValue = @"";
+    
     vc3.title = @"社区资源";
     vc3.tabBarItem.image = [UIImage imageNamed:@"shequ_nom"];
     vc3.tabBarItem.selectedImage = [UIImage imageNamed:@"shequ_clc"];

@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "NJKWebViewProgress.h"
+@interface ThreeViewController : BaseViewController<UIWebViewDelegate, NJKWebViewProgressDelegate>
 
-@interface ThreeViewController : BaseViewController
-
+@property (nonatomic,strong) UIWebView *myWebView;
+@property (nonatomic,strong) NSString *webLink;//连接地址
 @end

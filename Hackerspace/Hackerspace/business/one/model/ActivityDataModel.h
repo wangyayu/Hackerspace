@@ -16,4 +16,5 @@
 @property (nonatomic, strong) NSString *activityDescription;//活动描述
 @property (nonatomic, strong) NSString *activityMiniPic;//活动小图
 
+@property (nonatomic, strong) NSString *clickAct;//点击跳转
 @end

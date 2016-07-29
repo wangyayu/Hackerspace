@@ -1,21 +1,20 @@
 //
-//  ThreeViewController.m
-//  OA5173
+//  NbWEBViewViewController.m
+//  Hackerspace
 //
-//  Created by wangyayu on 16/5/25.
+//  Created by macmi001 on 16/7/29.
 //  Copyright © 2016年 wangyy. All rights reserved.
 //
 
-#import "ThreeViewController.h"
+#import "NbWEBViewViewController.h"
 #import "NJKWebViewProgressView.h"
-@interface ThreeViewController ()
+@interface NbWEBViewViewController ()
 
 @end
 
-@implementation ThreeViewController{
-    
-    //    UIWebView *_webView;
-    
+@implementation NbWEBViewViewController{
+
+//    UIWebView *_webView;
     NJKWebViewProgressView *_progressView;
     NJKWebViewProgress *_progressProxy;
 }
@@ -24,10 +23,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, kScreenHeight)];
-    [self.view addSubview:self.myWebView];
-    
-    self.webLink = @"https://mp.weixin.qq.com/s?__biz=MzA4MzY0NTcyMw==&mid=203039280&idx=1&sn=332715925a59621ba93d6c49165b3994&scene=1&srcid=0729Qam7NaKkMdXjSk9sH57a&key=8dcebf9e179c9f3a71d8f9ffdd6054042051d61934acde6d88bffa1e1209bd573a2f3b61f3962ab7fd558b5442e62eb9&ascene=0&uin=NjUwODU1ODQw&devicetype=iMac+Macmini7%2C1+OSX+OSX+10.11.4+build(15E65)&version=11000003&pass_ticket=sPcuTp0%2FtnRUPhcV8cn32LckAG1i1I13%2FA%2FSuVdPMAiE7QQRDBrhNYnUiu%2BGSpeY";
     
     _progressProxy = [[NJKWebViewProgress alloc] init];
     self.myWebView.delegate = _progressProxy;
@@ -68,7 +63,7 @@
 -(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress
 {
     [_progressView setProgress:progress animated:YES];
-//    self.title = [self.myWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    self.title = [self.myWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 - (void)didReceiveMemoryWarning {

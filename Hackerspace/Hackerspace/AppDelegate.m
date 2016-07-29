@@ -36,6 +36,7 @@
         switch (tag) {
             case 1100:{
                 NSLog(@"点击广告回调");
+                [self updateNewsItems];
             }
                 break;
             case 1101:

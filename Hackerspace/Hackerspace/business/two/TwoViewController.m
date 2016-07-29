@@ -9,6 +9,7 @@
 #import "TwoViewController.h"
 #import "Masonry.h"
 #import "AFNetworking.h"
+#import "ComActTableViewCell.h"
 @interface TwoViewController ()
 
 @end
@@ -24,9 +25,12 @@
 
 -(void)initModel{
     self.myData = [[NSMutableArray alloc]init];
-    [self.myData addObject:@"请假"];
-    [self.myData addObject:@"补卡"];
-    [self.myData addObject:@"考勤"];
+    [self.myData addObject:@"社区"];
+    [self.myData addObject:@"社区"];
+    [self.myData addObject:@"社区"];
+    [self.myData addObject:@"社区"];
+    [self.myData addObject:@"社区"];
+    [self.myData addObject:@"社区"];
 
 }
 -(void)initView{
@@ -60,7 +64,7 @@
 -(CGFloat)tableView:(UITableView *)tableView
           heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    CGFloat h = 60.0;
+    CGFloat h = 150.0;
     return h;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -88,16 +92,17 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView
                                  cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath]; //根据indexPath准确地取出一行，而不是从cell重用队列中取出
+    static NSString *CellIdentifier = @"ComActTableViewCell";
+    
+    ComActTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                              reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:nil options:nil] lastObject];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = self.myData[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.contentView.backgroundColor = [untilisTool stringTOColor:@"#f3f4f6"];
+    
+    return cell;
     return cell;
 }
 

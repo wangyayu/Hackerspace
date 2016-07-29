@@ -130,15 +130,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 #pragma mark返回每行的单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath==0&&indexPath.row==0) {
+        
+    }
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath]; //根据indexPath准确地取出一行，而不是从cell重用队列中取出
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell == nil) {
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
                                       reuseIdentifier:CellIdentifier];
     }
+    
     if (indexPath.section==0&&indexPath.row==0) {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }else{
